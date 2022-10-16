@@ -88,7 +88,7 @@ async def start_command(client: Bot, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except BaseException:
                 return
-        temp_msg = await message.reply("<code>Tunggu Sebentar...</code>")
+        temp_msg = await message.reply("<code>Processing...</code>")
         try:
             messages = await get_messages(client, ids)
         except BaseException:
